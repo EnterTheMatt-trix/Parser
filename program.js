@@ -1,5 +1,5 @@
 const technicalSkills = [
-  "Angular", "C", "C#", "Objective-C", "CSS", "Docker", "Go", "HTML", "Java", "JavaScript", 
+  "Angular", "C", "C#", "Objective-C", "C++", "CSS", "Docker", "Go", "HTML", "Java", "JavaScript", 
   "Kotlin", "Kubernetes", "MongoDB", "Node.js", "PHP", "Python", "React", "Ruby", 
   "SQL", "Swift", "Vue.js"
 ];
