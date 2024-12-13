@@ -1,11 +1,6 @@
-// Define the list of skills to match
-const skillSynonyms = {
-  "Node.js": ["Node.js", "NodeJS", "Node", "nodejs12"],
-  "Objective-C": ["Objective-C", "ObjC", "Obj-C", "ObjectiveC"],
-  "C++": ["C++", "CPlusPlus", "C++17", "C++20"],
-  "Python": ["Python", "py", "Python3", "Python2.7"]
-  // Add more canonical skills and their synonyms here
-};
+// Adjust path as needed
+const response = await fetch('/Users/matthewspehlmann/Desktop/Method/parser/Parser/technologies.json');
+const skillSynonyms = await response.json();
 
 // Extract page text (in a Chrome extension content script or the console)
 const pageText = document.body.innerText;
