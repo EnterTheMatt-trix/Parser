@@ -1,27 +1,27 @@
-// Define the list of skills to match
-const skillsList = [
-  "Angular", "C", "C#", "Objective-C", "C++", "CSS", "Docker", "Go", "HTML",
-  "Java", "JavaScript", "Kotlin", "Kubernetes", "MongoDB", "Node.js", "PHP",
-  "Python", "React", "Ruby", "SQL", "Swift", "Vue.js"
-];
+// Adjust path as needed
+const response = await fetch('/Users/matthewspehlmann/Desktop/Method/parser/Parser/technologies.json');
+const skillSynonyms = await response.json();
 
-// Extract all text content from the entire document
+// Extract page text (in a Chrome extension content script or the console)
 const pageText = document.body.innerText;
 
-// Split the text into tokens, preserving meaningful special characters
-const tokens = pageText
-  .split(/[\s,;!?(){}<>[\]:"'`~]+/)
-  .filter(Boolean);
+// Split the text into tokens (maintaining certain punctuation)
+const tokens = pageText.split(/[\s,;!?(){}<>[\]:"'`~]+/).filter(Boolean);
 
-// Normalize tokens and skills for case-insensitive comparison
+// Normalize them to lowercase for easy comparison
 const normalizedTokens = tokens.map(token => token.toLowerCase());
-const normalizedSkills = skillsList.map(skill => skill.toLowerCase());
 
-// Find matches by checking each normalized skill against the tokens
-const foundSkills = skillsList.filter(skill => {
-  const normalizedSkill = skill.toLowerCase();
-  return normalizedTokens.includes(normalizedSkill);
-});
+const foundSkills = [];
 
-// Log the matched skills to the console
+for (const [canonicalSkill, variants] of Object.entries(skillSynonyms)) {
+  // Convert all variants to lowercase
+  const lowerVariants = variants.map(v => v.toLowerCase());
+
+  // If any variant is found in the page tokens, we add the canonical skill
+  const isFound = lowerVariants.some(variant => normalizedTokens.includes(variant));
+  if (isFound) {
+    foundSkills.push(canonicalSkill);
+  }
+}
+
 console.log("Skills found:", foundSkills);
