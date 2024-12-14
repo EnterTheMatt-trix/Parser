@@ -15,7 +15,7 @@
     ],
     "web_accessible_resources": [
       {
-        "resources": ["technologies.json"], 
+        "resources": ["categorized_technologies.json"], 
         "matches": ["<all_urls>"]
       }
     ]

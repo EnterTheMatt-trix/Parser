@@ -1,28 +1,43 @@
 (async function() {
-  // 1. Fetch the JSON using chrome.runtime.getURL
-  const response = await fetch(chrome.runtime.getURL('technologies.json'));
-  const skillSynonyms = await response.json();
+  // 1. Fetch your categorized skill definitions (JSON)
+  const response = await fetch(chrome.runtime.getURL('categorized_technologies.json'));
+  const skillCategories = await response.json();
 
-  // 2. Extract page text
+  // 2. Extract the page text and tokenize
   const pageText = document.body.innerText;
-
-  // 3. Split into tokens
-  const tokens = pageText.split(/[\s,;!?(){}<>[\]:"'`~]+/).filter(Boolean);
+  const tokens = pageText.split(/[\s,;!?(){}<>[\]:"'`~\/]+/).filter(Boolean);
   const normalizedTokens = tokens.map(token => token.toLowerCase());
 
-  // 4. Find matches
-  const foundSkills = [];
-  for (const [canonicalSkill, variants] of Object.entries(skillSynonyms)) {
-    const lowerVariants = variants.map(v => v.toLowerCase());
-    const isFound = lowerVariants.some(variant => normalizedTokens.includes(variant));
-    if (isFound) {
-      foundSkills.push(canonicalSkill);
+  // 3. Prepare an object for matched skills keyed by category
+  const foundSkillsByCategory = {};
+
+  // 4. Iterate over categories
+  for (const [categoryName, skillMap] of Object.entries(skillCategories)) {
+    // Example skillMap structure:
+    // {
+    //   "C++": ["C++", "C++17", "cplusplus"],
+    //   "Python": ["Python", "py", "python3"]
+    // }
+    foundSkillsByCategory[categoryName] = [];
+
+    for (const [canonicalSkill, variants] of Object.entries(skillMap)) {
+      const lowerVariants = variants.map(v => v.toLowerCase());
+      const isFound = lowerVariants.some(variant => normalizedTokens.includes(variant));
+      if (isFound) {
+        foundSkillsByCategory[categoryName].push(canonicalSkill);
+      }
     }
   }
 
-  // 5. Log the results
-  chrome.storage.local.set({ foundSkills }, () => {
-    console.log("Skills found:", foundSkills);
+  // 5. Remove categories that have no found skills
+  Object.entries(foundSkillsByCategory).forEach(([category, skills]) => {
+    if (skills.length === 0) {
+      delete foundSkillsByCategory[category];
+    }
   });
-  
+
+  // 6. Store the foundSkillsByCategory in chrome.storage.local
+  chrome.storage.local.set({ foundSkillsByCategory }, () => {
+    console.log("Skills by category saved:", foundSkillsByCategory);
+  });
 })();

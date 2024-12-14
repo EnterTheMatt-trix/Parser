@@ -1,0 +1,25 @@
+{
+    "Languages": {
+      "C": ["C", "ANSI C"],
+      "C++": ["C++", "C++17", "C++20", "cplusplus"],
+      "Python": ["Python", "py", "python3", "python2"],
+      "Java": ["Java", "J2EE"]
+    },
+    "FrontendFrameworks": {
+      "React": ["React", "React.js", "ReactJS"],
+      "Angular": ["Angular", "Angular2+", "Ng"],
+      "Vue.js": ["Vue.js", "Vuejs"]
+    },
+    "BackendFrameworks": {
+      "Node.js": ["Node.js", "Node", "NodeJS"],
+      "Django": ["Django", "Django3", "Django2"]
+    },
+    "Databases": {
+      "MongoDB": ["MongoDB", "mongo"],
+      "SQL": ["SQL", "MySQL", "PostgreSQL"],
+      "NoSQL": ["NoSQL", "MongoDB", "Cassandra"] 
+    },
+    "DevOpsTools": {
+      "Kubernetes": ["Kubernetes", "k8s"]
+    }
+  }

@@ -2,5 +2,16 @@
     "Node.js": ["Node.js", "NodeJS", "Node", "nodejs12"],
     "Objective-C": ["Objective-C", "ObjC", "Obj-C", "ObjectiveC"],
     "C++": ["C++", "CPlusPlus", "C++17", "C++20"],
-    "Python": ["Python", "py", "Python3", "Python2.7"]
+    "Python": ["Python", "py", "Python3", "Python2.7"],
+    "Java": ["Java", "java8", "java11", "OpenJDK", "JavaSE"],
+    "Kubernetes": ["Kubernetes", "K8s", "Kube"],
+    "SQL": [
+        "SQL",
+        "sql",
+        "SQL Server",
+        "Structured Query Language",
+        "PostgreSQL",
+        "MySQL",
+        "SQLite"
+    ]
 }
