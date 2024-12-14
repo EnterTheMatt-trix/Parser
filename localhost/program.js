@@ -1,5 +1,5 @@
 // Adjust path as needed
-const response = await fetch('/Users/matthewspehlmann/Desktop/Method/parser/Parser/technologies.json');
+const response = await fetch('http://localhost:8000/technologies.json');
 const skillSynonyms = await response.json();
 
 // Extract page text (in a Chrome extension content script or the console)
