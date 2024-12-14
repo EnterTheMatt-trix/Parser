@@ -21,5 +21,8 @@
   }
 
   // 5. Log the results
-  console.log("Skills found:", foundSkills);
+  chrome.storage.local.set({ foundSkills }, () => {
+    console.log("Skills found:", foundSkills);
+  });
+  
 })();

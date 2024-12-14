@@ -25,3 +25,4 @@ for (const [canonicalSkill, variants] of Object.entries(skillSynonyms)) {
 }
 
 console.log("Skills found:", foundSkills);
+alert("Skills found: " + (foundSkills.length ? foundSkills.join(", ") : "None"));
