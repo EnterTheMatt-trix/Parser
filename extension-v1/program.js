@@ -5,7 +5,7 @@
 
   // 2. Extract the page text and tokenize
   const pageText = document.body.innerText;
-  const tokens = pageText.split(/[\s,;!?(){}<>[\]:"'`~\/]+/).filter(Boolean);
+  const tokens = pageText.split(/[\s,;!?(){}<>[\]:"'`~\/&]+/).filter(Boolean);
   const normalizedTokens = tokens.map(token => token.toLowerCase());
 
   // 3. Prepare an object for matched skills keyed by category

@@ -8,14 +8,16 @@
       "Go": ["Go", "Golang", "GoLang"],
       "JavaScript": ["JavaScript", "JS"],
       "TypeScript": ["TypeScript", "TS"],
-      "Dart": ["Dart"]
+      "Dart": ["Dart"],
+      "Hack": ["Hack"],
+      "Swift": ["Swift"],
+      "Kotlin": ["Kotlin"]
     },
     "FrontendFrameworks": {
-      "React": ["React", "React.js", "ReactJS"],
+      "React": ["React", "React.js", "ReactJS", "React Query", "React Native"],
       "Redux": ["Redux"],
       "Next.js": ["Next.js", "NextJS"],
       "NX": ["NX"],
-      "React Query": ["React Query"],
       "Angular": ["Angular", "Angular2+", "Ng"],
       "Vue.js": ["Vue.js", "Vuejs"],
       "Flutter": ["Flutter"]
@@ -26,7 +28,7 @@
       "SOA": ["SOA", "Service-Oriented Architecture"],
       "Microservices": ["Microservices"],
       "GraphQL": ["GraphQL"],
-      "REST APIs": ["REST API", "RESTful API"]
+      "RESTAPIs": ["REST API", "RESTful API"]
     },
     "OperatingSystems": {
       "Linux": ["Linux"],
@@ -40,15 +42,15 @@
     },
     "Tools": {
       "Oscilloscopes": ["Oscilloscopes", "Oscilloscope"],
-      "Logic Analyzers": ["Logic Analyzers", "Logic Analyzer"],
+      "LogicAnalyzers": ["Logic Analyzers", "Logic Analyzer"],
       "Multimeters": ["Multimeters", "Multimeter"]
     },
     "DevOpsTools": {
       "Kubernetes": ["Kubernetes", "k8s"],
-      "AWS Lambda": ["AWS Lambda"],
+      "AWSLambda": ["AWS Lambda"],
       "CloudFront": ["CloudFront"],
       "Lambda@Edge": ["Lambda@Edge"],
-      "Akamai Edge": ["Akamai Edge"],
+      "AkamaiEdge": ["Akamai Edge"],
       "Jenkins": ["Jenkins"],
       "Git": ["Git", "gitlab"],
       "Splunk": ["Splunk"],
@@ -61,8 +63,8 @@
       "GCP": ["GCP", "Google Cloud Platform", "Google Cloud"]
     },
     "FrontendTechnologies": {
-      "HTML5": ["HTML5"],
-      "CSS3": ["CSS3"]
+      "HTML": ["HTML", "HTML5", "XHTML"],
+      "CSS": ["CSS", "CSS3"]
     },
     "Databases": {
       "MongoDB": ["MongoDB", "mongo"],
@@ -74,10 +76,10 @@
       "TDD": ["TDD", "Test Driven Development"],
       "Scrum": ["Scrum"],
       "Agile": ["Agile"],
-      "Iterative Development": ["Iterative Development"],
+      "IterativeDevelopment": ["Iterative Development"],
       "SEO": ["SEO", "Search Engine Optimization"],
       "Accessibility": ["Accessibility", "A11Y"],
-      "Performance Tuning": ["Performance Tuning"],
+      "PerformanceTuning": ["Performance Tuning"],
       "Telemetry": ["Telemetry"]
     },
     "TestingFrameworks": {
@@ -85,7 +87,7 @@
         "Playwright": ["Playwright"]
     },
     "Domains": {
-      "Cloud Computing": ["Cloud Computing"],
-      "Utility Computing": ["Utility Computing"]
+      "CloudComputing": ["Cloud Computing"],
+      "UtilityComputing": ["Utility Computing"]
     }
 }
