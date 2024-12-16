@@ -1,25 +1,92 @@
 {
     "Languages": {
-      "C": ["C", "ANSI C"],
-      "C++": ["C++", "C++17", "C++20", "cplusplus"],
-      "Python": ["Python", "py", "python3", "python2"],
-      "Java": ["Java", "J2EE"]
+      "Programming": {
+        "Python": ["Python", "py", "python3", "python2"],
+        "Java": ["Java", "J2EE"],
+        "C++": ["C++", "C++17", "C++20", "cplusplus"],
+        "C#": ["C#", "CSharp"],
+        "Go": ["Go", "Golang", "GoLang"],
+        "Dart": ["Dart"]
+      },
+      "Scripting": {
+        "JavaScript": ["JavaScript", "JS"],
+        "TypeScript": ["TypeScript", "TS"]
+      }
     },
     "FrontendFrameworks": {
       "React": ["React", "React.js", "ReactJS"],
-      "Angular": ["Angular", "Angular2+", "Ng"],
-      "Vue.js": ["Vue.js", "Vuejs"]
+      "Redux": ["Redux"],
+      "Next.js": ["Next.js", "NextJS"],
+      "NX": ["NX"],
+      "Flutter": ["Flutter"],
+      "Vue.js": ["Vue.js", "Vuejs"],
+      "Angular": ["Angular", "Angular2+", "Ng"]
     },
     "BackendFrameworks": {
       "Node.js": ["Node.js", "Node", "NodeJS"],
-      "Django": ["Django", "Django3", "Django2"]
+      "Django": ["Django", "Django3", "Django2"],
+      "GraphQL": ["GraphQL"],
+      "REST APIs": ["REST API", "RESTful API"],
+      "Microservices": ["Microservices"],
+      "SOA": ["SOA", "Service-Oriented Architecture"]
     },
     "Databases": {
-      "MongoDB": ["MongoDB", "mongo"],
-      "SQL": ["SQL", "MySQL", "PostgreSQL"],
-      "NoSQL": ["NoSQL", "MongoDB", "Cassandra"] 
+      "SQL": ["SQL", "MySQL", "PostgreSQL", "SQLite"],
+      "NoSQL": ["NoSQL", "MongoDB", "Cassandra", "DynamoDB"],
+      "Redis": ["Redis", "In-Memory Database", "Redis Cache"]
+    },
+    "TestingFrameworks": {
+      "Unit Testing": {
+        "Jest": ["Jest"],
+        "Mocha": ["Mocha"]
+      },
+      "End-to-End Testing": {
+        "Cypress": ["Cypress"],
+        "Playwright": ["Playwright"],
+        "Selenium": ["Selenium"],
+        "Puppeteer": ["Puppeteer"]
+      }
     },
     "DevOpsTools": {
-      "Kubernetes": ["Kubernetes", "k8s"]
+      "CI/CD": ["CI/CD", "Continuous Integration", "Continuous Deployment"],
+      "Monitoring": {
+        "Splunk": ["Splunk"],
+        "Dynatrace": ["Dynatrace"]
+      },
+      "Orchestration": {
+        "Kubernetes": ["Kubernetes", "k8s"],
+        "Docker": ["Docker"]
+      },
+      "Build Tools": {
+        "Jenkins": ["Jenkins"],
+        "Git": ["Git", "gitlab", "GitHub"]
+      }
+    },
+    "OperatingSystems": {
+      "Linux": ["Linux"],
+      "RTOS": ["RTOS", "Real-Time Operating System"],
+      "RTLinux": ["RTLinux", "Real-Time Linux"]
+    },
+    "CloudPlatforms": {
+      "AWS": ["AWS", "Amazon Web Services"],
+      "Azure": ["Azure", "Microsoft Azure"],
+      "GCP": ["GCP", "Google Cloud Platform", "Google Cloud"]
+    },
+    "Processes": {
+      "Agile": ["Agile"],
+      "Scrum": ["Scrum"],
+      "TDD": ["TDD", "Test Driven Development"],
+      "Performance Tuning": ["Performance Tuning"],
+      "Telemetry": ["Telemetry"]
+    },
+    "SoftwareTools": {
+      "Wireshark": ["Wireshark"],
+      "GDB": ["GDB", "GNU Debugger"],
+      "MATLAB": ["MATLAB"]
+    },
+    "HardwareTools": {
+      "Oscilloscopes": ["Oscilloscopes", "Oscilloscope"],
+      "Logic Analyzers": ["Logic Analyzers", "Logic Analyzer"],
+      "Multimeters": ["Multimeters", "Multimeter"]
     }
   }
