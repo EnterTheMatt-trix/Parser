@@ -3,23 +3,89 @@
       "C": ["C", "ANSI C"],
       "C++": ["C++", "C++17", "C++20", "cplusplus"],
       "Python": ["Python", "py", "python3", "python2"],
-      "Java": ["Java", "J2EE"]
+      "Java": ["Java", "J2EE"],
+      "C#": ["C#", "CSharp"],
+      "Go": ["Go", "Golang", "GoLang"],
+      "JavaScript": ["JavaScript", "JS"],
+      "TypeScript": ["TypeScript", "TS"],
+      "Dart": ["Dart"]
     },
     "FrontendFrameworks": {
       "React": ["React", "React.js", "ReactJS"],
+      "Redux": ["Redux"],
+      "Next.js": ["Next.js", "NextJS"],
+      "NX": ["NX"],
+      "React Query": ["React Query"],
       "Angular": ["Angular", "Angular2+", "Ng"],
-      "Vue.js": ["Vue.js", "Vuejs"]
+      "Vue.js": ["Vue.js", "Vuejs"],
+      "Flutter": ["Flutter"]
     },
     "BackendFrameworks": {
       "Node.js": ["Node.js", "Node", "NodeJS"],
-      "Django": ["Django", "Django3", "Django2"]
+      "Django": ["Django", "Django3", "Django2"],
+      "SOA": ["SOA", "Service-Oriented Architecture"],
+      "Microservices": ["Microservices"],
+      "GraphQL": ["GraphQL"],
+      "REST APIs": ["REST API", "RESTful API"]
+    },
+    "OperatingSystems": {
+      "Linux": ["Linux"],
+      "RTLinux": ["RTLinux", "Real-Time Linux"],
+      "RTOS": ["RTOS", "Real-Time Operating System"]
+    },
+    "Software": {
+      "Wireshark": ["Wireshark"],
+      "GDB": ["GDB", "GNU Debugger"],
+      "MATLAB": ["MATLAB"]
+    },
+    "Tools": {
+      "Oscilloscopes": ["Oscilloscopes", "Oscilloscope"],
+      "Logic Analyzers": ["Logic Analyzers", "Logic Analyzer"],
+      "Multimeters": ["Multimeters", "Multimeter"]
+    },
+    "DevOpsTools": {
+      "Kubernetes": ["Kubernetes", "k8s"],
+      "AWS Lambda": ["AWS Lambda"],
+      "CloudFront": ["CloudFront"],
+      "Lambda@Edge": ["Lambda@Edge"],
+      "Akamai Edge": ["Akamai Edge"],
+      "Jenkins": ["Jenkins"],
+      "Git": ["Git", "gitlab"],
+      "Splunk": ["Splunk"],
+      "Dynatrace": ["Dynatrace"],
+      "CI/CD": ["CI/CD", "Continuous Integration", "Continuous Deployment"]
+    },
+    "CloudPlatforms": {
+      "AWS": ["AWS", "Amazon Web Services"],
+      "Azure": ["Azure", "Microsoft Azure"],
+      "GCP": ["GCP", "Google Cloud Platform", "Google Cloud"]
+    },
+    "FrontendTechnologies": {
+      "HTML5": ["HTML5"],
+      "CSS3": ["CSS3"]
     },
     "Databases": {
       "MongoDB": ["MongoDB", "mongo"],
       "SQL": ["SQL", "MySQL", "PostgreSQL"],
-      "NoSQL": ["NoSQL", "MongoDB", "Cassandra"] 
+      "NoSQL": ["NoSQL", "MongoDB", "Cassandra"],
+      "Redis": ["Redis", "In-Memory Database", "Redis Cache"]
     },
-    "DevOpsTools": {
-      "Kubernetes": ["Kubernetes", "k8s"]
+    "Processes": {
+      "TDD": ["TDD", "Test Driven Development"],
+      "Scrum": ["Scrum"],
+      "Agile": ["Agile"],
+      "Iterative Development": ["Iterative Development"],
+      "SEO": ["SEO", "Search Engine Optimization"],
+      "Accessibility": ["Accessibility", "A11Y"],
+      "Performance Tuning": ["Performance Tuning"],
+      "Telemetry": ["Telemetry"]
+    },
+    "TestingFrameworks": {
+        "Cypress": ["Cypress"],
+        "Playwright": ["Playwright"]
+    },
+    "Domains": {
+      "Cloud Computing": ["Cloud Computing"],
+      "Utility Computing": ["Utility Computing"]
     }
-  }
+}
