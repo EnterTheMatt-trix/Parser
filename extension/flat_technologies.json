@@ -25,6 +25,7 @@
   "JavaScript": ["JavaScript", "JS"],
   "Jenkins": ["Jenkins"],
   "Jest": ["Jest"],
+  "JSP": ["JSP", "Jakarta Server Pages", "JSTL"],
   "Kotlin": ["Kotlin"],
   "Kubernetes": ["Kubernetes", "k8s"],
   "Linux": ["Linux"],
