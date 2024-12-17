@@ -1,24 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Get the matched skills from storage
-  chrome.storage.local.get(["matchedSkills"], (data) => {
-    const matchedSkills = data.matchedSkills || {};
-    const container = document.getElementById("skills-container");
+  const scanButton = document.getElementById("scanButton");
+  const container = document.getElementById("skills-container");
 
-    // If no skills were found, display a message
-    if (Object.keys(matchedSkills).length === 0) {
-      container.textContent = "No skills found on this page.";
-      return;
-    }
+  scanButton.addEventListener("click", async () => {
+    // 1. Query the active tab
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    
+    // 2. Execute 'program.js' on the current tab
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: ["program.js"]  // The content script file
+    });
 
-    // Create a list of matched skills
-    const ul = document.createElement("ul");
-    for (const [canonicalSkill, synonyms] of Object.entries(matchedSkills)) {
-      const li = document.createElement("li");
-      li.textContent = canonicalSkill; // Display the canonical skill name
-      ul.appendChild(li);
-    }
+    // 3. Short delay to let the content script finish
+    setTimeout(() => {
+      // 4. Retrieve matchedSkills from chrome.storage.local
+      chrome.storage.local.get(["matchedSkills"], (data) => {
+        const matchedSkills = data.matchedSkills || {};
+        container.innerHTML = ""; // Clear existing content
 
-    container.textContent = ""; // Clear the loading message
-    container.appendChild(ul);
+        if (Object.keys(matchedSkills).length === 0) {
+          container.textContent = "No skills found on this page.";
+          return;
+        }
+
+        // Display the matched skills
+        const ul = document.createElement("ul");
+        for (const [canonicalSkill] of Object.entries(matchedSkills)) {
+          const li = document.createElement("li");
+          li.textContent = canonicalSkill;
+          ul.appendChild(li);
+        }
+        container.appendChild(ul);
+      });
+    }, 500); // half-second delay to ensure 'program.js' finishes
   });
 });
