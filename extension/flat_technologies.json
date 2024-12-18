@@ -46,7 +46,7 @@
   "Observability": ["Observability"],
   "Oscilloscopes": ["Oscilloscopes", "Oscilloscope"],
   "Performance Tuning": ["Performance Tuning"],
-  "Playwright": ["Playwright", "Playwright."],
+  "Playwright": ["Playwright"],
   "PostgreSQL": ["PostgreSQL"],
   "Python": ["Python", "Py", "Python3"],
   "Quasar": ["Quasar"],
@@ -70,7 +70,7 @@
   "Vite": ["Vite"],
   "Vue.js": ["Vue.js", "Vuejs"],
   "WebAssembly": ["WebAssembly", "Wasm"],
-  "Webpack": ["Webpack", "Webpack."],
+  "Webpack": ["Webpack"],
   "Wireshark": ["Wireshark"],
   "XHTML": ["XHTML"]
 }

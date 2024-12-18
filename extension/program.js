@@ -30,12 +30,16 @@
   // Tokenize text for single-word matching
   const tokens = pageText.split(/[\s,;!?(){}<>[\]:"'`~\/&]+/).filter(Boolean);
   const normalizedTokens = tokens.map(token => token.toLowerCase());
+  
+  // After creating normalizedTokens
+  const cleanTokens = normalizedTokens.map(token => token.endsWith('.') ? token.slice(0, -1) : token);
 
   const singleWordMatches = {};
 
   for (const [canonicalSkill, synonyms] of Object.entries(singleWordSynonyms)) {
     const lowerSynonyms = synonyms.map(s => s.toLowerCase());
-    const isFound = lowerSynonyms.some(synonym => normalizedTokens.includes(synonym));
+    // Now use cleanTokens instead of normalizedTokens in the matching logic
+    const isFound = lowerSynonyms.some(synonym => cleanTokens.includes(synonym));
     if (isFound) singleWordMatches[canonicalSkill] = synonyms;
   }
 
