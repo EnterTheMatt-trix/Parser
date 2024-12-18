@@ -30,15 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // Sort the skill names alphabetically (case-insensitive)
         skillNames.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
 
-        // Create a bullet list of sorted skills
-        const ul = document.createElement("ul");
-        skillNames.forEach(skillName => {
-          const li = document.createElement("li");
-          li.textContent = skillName;
-          ul.appendChild(li);
-        });
+        // Join the sorted list into a comma-separated string
+        const commaSeparatedSkills = skillNames.join(", ");
 
-        container.appendChild(ul);
+        container.textContent = commaSeparatedSkills;
       });
     }, 500); // half-second delay to ensure 'program.js' finishes
   });
