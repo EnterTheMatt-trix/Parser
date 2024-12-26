@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       files: ["program.js"]  // The content script file
     });
 
-    // 3. Short delay to let the content script finish
+    // 3. Short delay to let 'program.js' finish parsing
     setTimeout(() => {
       // 4. Retrieve matchedSkills from chrome.storage.local
       chrome.storage.local.get(["matchedSkills"], (data) => {
@@ -24,14 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
-        // Display the matched skills
-        const ul = document.createElement("ul");
-        for (const [canonicalSkill] of Object.entries(matchedSkills)) {
-          const li = document.createElement("li");
-          li.textContent = canonicalSkill;
-          ul.appendChild(li);
-        }
-        container.appendChild(ul);
+        // Convert matchedSkills object into an array of skill names
+        const skillNames = Object.keys(matchedSkills);
+
+        // Sort the skill names alphabetically (case-insensitive)
+        skillNames.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+
+        // Join the sorted list into a comma-separated string
+        const commaSeparatedSkills = skillNames.join(", ");
+
+        container.textContent = commaSeparatedSkills;
       });
     }, 500); // half-second delay to ensure 'program.js' finishes
   });
