@@ -15,7 +15,7 @@
   "C#": ["C#", "CSharp"],
   "C++": ["C++"],
   "Cassandra": ["Cassandra"],
-  "CI/CD": ["CI/CD"],
+  "CI/CD": ["CI/CD", "ci cd"],
   "Concurrency": ["Concurrency"],
   "CSS": ["CSS"],
   "Cypress": ["Cypress"],
@@ -88,5 +88,5 @@
   "Webpack": ["Webpack"],
   "Wireshark": ["Wireshark"],
   "XHTML": ["XHTML"],
-  "z/OS": ["z/OS"]
+  "z/OS": ["z/OS", "z os"]
 }
