@@ -32,7 +32,11 @@
   const normalizedTokens = tokens.map(token => token.toLowerCase());
   
   // After creating normalizedTokens
-  const cleanTokens = normalizedTokens.map(token => token.endsWith('.') ? token.slice(0, -1) : token);
+  const cleanTokens = normalizedTokens.map(token => 
+    {  if (token.startsWith('.')) { return token.slice(1); }
+       if (token.endsWith('.')) { return token.slice(0, -1);}
+      return token; }
+  );
 
   const singleWordMatches = {};
 
