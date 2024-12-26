@@ -17,7 +17,7 @@
     if (singleWord.length > 0) singleWordSynonyms[canonicalSkill] = singleWord;
   }
 
-  // Multi-word matching
+  // Multi-word matching, no special treatment
   const multiWordMatches = {};
   const lowerPageText = pageText.toLowerCase();
 
@@ -25,23 +25,9 @@
     const lowerPhrases = phrases.map(p => p.toLowerCase());
     const isFound = lowerPhrases.some(phrase => lowerPageText.includes(phrase));
     if (isFound) multiWordMatches[canonicalSkill] = phrases;
-  }
+  } 
 
-// Tokenize text by splitting on whitespace
-const tokensForSlashes = pageText
-  .split(/[\s/]+/)  // Split on whitespace or slashes
-  .filter(Boolean)  // Remove any empty strings
-  .map(token => token.toLowerCase());  // Convert to lowercase
-for (const [canonicalSkill, synonyms] of Object.entries(multiWordSynonyms)) {
-  console.log("Split on slash", tokensForSlashes);
-  console.log("Multi words", multiWordSynonyms)
-  const lowerSynonyms = synonyms.map(s => s.toLowerCase());
-  // Now use tokensForSlashes instead in the matching logic
-  const isFound = lowerSynonyms.some(synonym => tokensForSlashes.includes(synonym));
-  if (isFound) multiWordMatches[canonicalSkill] = synonyms;
-}  
-
-// Multi-word matching
+// Multi-word matching, treatment for compound skills with '/'
 const multiWordMatchesForSlashes = {};
 const lowerPageTextForSlashes = pageText.toLowerCase().replace(/\//g, ' ');  // Replace all slashes with spaces
 console.log('Processed page text:', lowerPageTextForSlashes);
@@ -55,15 +41,7 @@ for (const [canonicalSkill, phrases] of Object.entries(multiWordSynonyms)) {
   // Tokenize text for single-word matching
   const tokens = pageText.split(/[\s,;!?(){}<>[\]:"'`~\/&]+/).filter(Boolean);
   const normalizedTokens = tokens.map(token => token.toLowerCase());
-  /*
-  * What if we have 1) a third tier that is do not split on /
-  * 2) split on / and run the matching as is now
-  * We are splitting on /, and then matching single or multi word
-  * but for ci/cd we should recognize that as a multi word 
-  * How about we run a matching for phrases
-  * Then, a matching for slashes
-  * Then, a matching for normalized tokens
-  */
+  
   // After creating normalizedTokens
   const cleanTokens = normalizedTokens.map(token => 
     {  if (token.startsWith('.')) { return token.slice(1); }
