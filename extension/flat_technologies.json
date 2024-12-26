@@ -6,6 +6,7 @@
   "Apache Iceberg": ["Apache Iceberg", "Iceberg"],
   "Apache Kafka": ["Apache Kafka", "Kafka"],
   "Apache Tomcat": ["Apache Tomcat"],
+  "ASP.net": ["ASP.net"],
   "Angular": ["Angular"],
   "AWS": ["AWS", "Amazon Web Services"],
   "Azure": ["Azure", "Microsoft Azure"],
@@ -14,6 +15,7 @@
   "C#": ["C#", "CSharp"],
   "C++": ["C++"],
   "Cassandra": ["Cassandra"],
+  "CI/CD": ["CI/CD"],
   "Concurrency": ["Concurrency"],
   "CSS": ["CSS"],
   "Cypress": ["Cypress"],
@@ -31,6 +33,7 @@
   "GraphQL": ["GraphQL"],
   "gRPC": ["gRPC"],
   "Hack": ["Hack"],
+  "HTML":["HTML"],
   "Java": ["Java", "J2EE"],
   "JavaScript": ["JavaScript", "JS"],
   "Jenkins": ["Jenkins"],
@@ -68,6 +71,7 @@
   "RTLinux": ["RTLinux", "Real-Time Linux"],
   "RTOS": ["RTOS", "Real-Time Operating System"],
   "Salt": ["Salt"],
+  "SCADA": ["SCADA"],
   "Scrum": ["Scrum"],
   "Selenium": ["Selenium"],
   "SQL": ["SQL", "MySQL", "PostgreSQL", "SQLite"],
@@ -83,5 +87,6 @@
   "WebAssembly": ["WebAssembly", "Wasm"],
   "Webpack": ["Webpack"],
   "Wireshark": ["Wireshark"],
-  "XHTML": ["XHTML"]
+  "XHTML": ["XHTML"],
+  "z/OS": ["z/OS"]
 }
