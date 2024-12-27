@@ -82,6 +82,7 @@
   "Telemetry": ["Telemetry"],
   "Terraform": ["Terraform"],
   "TypeScript": ["TypeScript", "TS"],
+  "Unity": ["Unity"],
   "Vite": ["Vite"],
   "Vue.js": ["Vue.js", "Vuejs"],
   "WebAssembly": ["WebAssembly", "Wasm"],
