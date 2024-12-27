@@ -1,7 +1,7 @@
 {
     "name": "Skill Parser Extension",
     "description": "A simple Chrome extension that parses pages for skills. On demand.",
-    "version": "2.9",
+    "version": "3.0",
     "manifest_version": 3,
     "permissions": ["activeTab", "scripting", "storage"],
     "action": {
