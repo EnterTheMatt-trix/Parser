@@ -9,16 +9,24 @@
       margin: 10px;
       width: 250px; /* popup width */
     }
-    #scanButton {
+    #scanButton, #copyButton {
       margin-bottom: 10px;
     }
     #skills-container {
       margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .button-container {
+      display: flex;
+      gap: 10px;
     }
   </style>
 </head>
 <body>
-  <button id="scanButton">Scan This Page</button>
+  <div class="button-container">
+    <button id="scanButton">Scan This Page</button>
+    <button id="copyButton" disabled>Copy Skills</button>
+  </div>
   <h3>Skills Found:</h3>
   <div id="skills-container">Click "Scan This Page" to analyze.</div>
 
