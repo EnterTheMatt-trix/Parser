@@ -1,15 +1,21 @@
 {
-    "name": "Skill Parser Extension",
-    "description": "A simple Chrome extension that parses pages for skills. On demand.",
-    "version": "3.1",
-    "manifest_version": 3,
-    "permissions": ["activeTab", "scripting", "storage"],
-    "action": {
-      "default_title": "Find Skills",
-      "default_popup": "popup.html"
-    },
-    "host_permissions": ["<all_urls>"],
-    "web_accessible_resources": [
+  "name": "Skill Parser Extension",
+  "description": "A simple Chrome extension that parses pages for skills. On demand.",
+  "version": "4.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "output-onlinepngtools (1).png",
+    "48": "output-onlinepngtools (1).png",
+    "128": "output-onlinepngtools (1).png"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_title": "Find Skills",
+    "default_popup": "popup.html",
+    "default_icon": "output-onlinepngtools (1).png"
+  },
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
     {
       "resources": ["flat_technologies.json"],
       "matches": ["<all_urls>"]
